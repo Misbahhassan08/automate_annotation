@@ -1,0 +1,29 @@
+1- run prepareDataset.py by adjusting model name in it 
+2- run main.py to start automate annotation in this code set status (if newly annotation started then set new if updating old annotation the set update), set label name
+8- run train_ssd using following command 
+python3 train_ssd.py --dataset-type=voc --data=data/{modelname}/ --model-dir=models/{modelname} --batch-size=2 --workers=5 --epochs=500
+
+
+
+Issues :
+
+By preparing data on feature extraction before labeling It create Data directory in which it create txt files. After labeling some of our images
+dont have rectangles which was neglacted in the end. So we need to remove all files from test.txt, trainval.txt, you can find these files 
+by running test.py to get removeable xml files.
+
+Code is not using Cuda Gpu on training, So I changed the code to use only Cuda and then I face GPU error because pytorh version is not installed with cuda 
+enbled then I found this link to 
+https://pytorch.org/get-started/previous-versions/
+# CUDA 11.6
+pip3 install torch==1.12.1+cu116 torchvision==0.13.1+cu116 torchaudio==0.12.1 --extra-index-url https://download.pytorch.org/whl/cu116
+
+After that with worker 0 it works otherwise it shows error
+python train_ssd.py --dataset-type=voc --data=data/Box/ --model-dir=models/Box --batch-size=32 --workers=0 --epochs=1000 
+
+echo "# automate_annotation" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M master
+git remote add origin https://github.com/Misbahhassan08/automate_annotation.git
+git push -u origin master

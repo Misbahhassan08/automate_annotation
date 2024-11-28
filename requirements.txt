@@ -1,0 +1,4 @@
+# https://github.com/Kazuhito00/OpenCV-Object-Tracker-Python-Sample/tree/main
+pycaret
+opencv-python==4.9.0.80
+opencv-contrib-python==4.9.0.80

@@ -1,0 +1,26 @@
+<annotation>
+	<folder>JPEGImages</folder>
+	<filename>file1.png</filename>
+	<path>F:\MexemAi\Products\AI_Annotation_ImageDetection\jetson_annotation_tracker/data/pills/JPEGImages/file49.png</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>&lt;Element 'width' at 0x00000297FF083B30&gt;</width>
+		<height>&lt;Element 'height' at 0x00000297FF083A90&gt;</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>uncomplete_pill</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>326</xmin>
+			<ymin>74</ymin>
+			<xmax>232</xmax>
+			<ymax>161</ymax>
+		</bndbox>
+	</object>
+</annotation>
